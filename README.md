@@ -38,7 +38,7 @@ dependencies {
         custom:textToggleRight="AND"/>
 ```
 
-![Sample of libray](docs/2_items.jpg)
+![Sample of libray with 2 items](docs/2_items.jpg)
 
 #### 3 Items 
 
@@ -51,6 +51,32 @@ dependencies {
         custom:textToggleLeft="OR"
         custom:textToggleRight="AND"/>
 ```
+
+![Sample of libray with 3 items](docs/3_items.jpg)
+
+#### N - Items support
+
+Your XML
+```xml
+<belka.us.androidtoggleswitch.widgets.ToggleSwitch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+```
+
+```java
+ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.multiple_switches);
+        ArrayList<String> labels = new ArrayList<>();
+        labels.add("AND");
+        labels.add("OR");
+        labels.add("XOR");
+        labels.add("NOT");
+        labels.add("OFF");
+        toggleSwitch.setLabels(labels);
+```
+![Sample of libray with 3 items](docs/n_items.jpg)
+
+## Customizations
 
 
 ## Listener
@@ -66,7 +92,6 @@ toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChan
         });
 ```
 
-## Customizations
 
 ## Contributors
 Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab)
