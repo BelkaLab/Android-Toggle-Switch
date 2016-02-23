@@ -51,7 +51,7 @@ dependencies {
         custom:textToggleRight="AND"/>
 ```
 
-![Sample of libray with 3 items](docs/3_items.jpg)
+![Sample of libray with 3 items](docs/3_items.gif)
 
 #### N - Items support
 
@@ -76,7 +76,7 @@ labels.add("NOT");
 labels.add("OFF");
 toggleSwitch.setLabels(labels);
 ```
-![Sample of libray with 3 items](docs/n_items.jpg)
+![Sample of libray with 3 items](docs/n_items.gif)
 
 NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
 
@@ -135,7 +135,7 @@ It is possible to customize the buttons applying the following options:
         custom:toggleWidth="104dp"/>
 ```
 
-![Sample of libray with 3 items](docs/customized.jpg)
+![Sample of libray with 3 items](docs/customized.gif)
 
 
 ## Contributors
