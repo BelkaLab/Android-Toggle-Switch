@@ -40,7 +40,7 @@ dependencies {
 
 ![Sample of libray with 2 items](docs/2_items.jpg)
 
-#### 3 Items 
+#### 3 Items
 
 ```xml
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
@@ -54,6 +54,8 @@ dependencies {
 ![Sample of libray with 3 items](docs/3_items.jpg)
 
 #### N - Items support
+
+Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
 
 XML
 ```xml
@@ -76,6 +78,30 @@ toggleSwitch.setLabels(labels);
 ```
 ![Sample of libray with 3 items](docs/n_items.jpg)
 
+NOTE. In any case the first button is checked by default.
+
+## Getters
+
+Get the position of the current checked toggleSwitch.
+
+```java
+int position = toggleSwitch.getCheckedTogglePosition();
+```
+
+
+## Listeners
+
+```java
+ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.toggle_switch);
+toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener(){
+
+            @Override
+            public void onToggleSwitchChangeListener(int position) {
+				// Write your code ... 
+            }
+        });
+```
+
 ## Customizations
 
 It is possible to customize the buttons applying the following options:
@@ -84,13 +110,14 @@ It is possible to customize the buttons applying the following options:
 | Option Name      				| Format                 | Description                              |
 | ---------------- 				| ---------------------- | -----------------------------            |
 | android:textSize 				| `dimension`  	         | Text size of each button                 |
-| custom:activeBgColor         | `color`               |  Background color of the active button    |
-| custom:activeTextColor       | `color`               | Text color of the active button |
-| custom:inactiveBgColor 		| `color`		         | `item_person.xml`             |
-| custom:inactiveTextColor     | `color`               | `partial_stats_bar.xml`       |
-| custom:separatorColor        | `color`               | `widget_my_custom_input.xml`  |
-| custom:toggleWidth    		| `dimension`           | `widget_my_custom_input.xml`  |
+| custom:activeBgColor         | `color`               |  Background color of the checked button    |
+| custom:activeTextColor       | `color`               | Text color of the checked button |
+| custom:inactiveBgColor 		| `color`		         | Background color of the inactive buttons  |
+| custom:inactiveTextColor     | `color`               | Text color of the inactive buttons       |
+| custom:separatorColor        | `color`               | Color of the vertical separator between inactive buttons  |
+| custom:toggleWidth    		| `dimension`           | Width of each button  |
 
+#### Example
 
 ```xml
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
@@ -109,19 +136,6 @@ It is possible to customize the buttons applying the following options:
 ```
 
 ![Sample of libray with 3 items](docs/customized.jpg)
-
-## Listener
-
-```java
-ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.toggle_switch);
-toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener(){
-
-            @Override
-            public void onToggleSwitchChangeListener(int position) {
-				// Write your code ... 
-            }
-        });
-```
 
 
 ## Contributors
