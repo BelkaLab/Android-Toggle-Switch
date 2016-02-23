@@ -1,5 +1,6 @@
 # Android-Toggle-Switch
-A customizable extension to Android switches that supports many items.
+
+A customizable extension of Android Switches that supports also more than 2 items.
 
 ![Sample of libray](docs/screen.jpg)
 
@@ -33,7 +34,6 @@ dependencies {
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         custom:textToggleLeft="OR"
         custom:textToggleRight="AND"/>
 ```
@@ -46,7 +46,6 @@ dependencies {
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         custom:textToggleCenter="XOR"
         custom:textToggleLeft="OR"
         custom:textToggleRight="AND"/>
@@ -56,7 +55,7 @@ dependencies {
 
 #### N - Items support
 
-Your XML
+XML
 ```xml
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:layout_width="wrap_content"
@@ -64,6 +63,7 @@ Your XML
         android:layout_gravity="center"/>
 ```
 
+JAVA code
 ```java
 ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.multiple_switches);
 ArrayList<String> labels = new ArrayList<>();
@@ -78,11 +78,24 @@ toggleSwitch.setLabels(labels);
 
 ## Customizations
 
+It is possible to customize the buttons applying the following options:
+
+
+| Option Name      				| Format                 | Description                              |
+| ---------------- 				| ---------------------- | -----------------------------            |
+| android:textSize 				| `dimension`  	         | Text size of each button                 |
+| custom:activeBgColor         | `color`               |  Background color of the active button    |
+| custom:activeTextColor       | `color`               | Text color of the active button |
+| custom:inactiveBgColor 		| `color`		         | `item_person.xml`             |
+| custom:inactiveTextColor     | `color`               | `partial_stats_bar.xml`       |
+| custom:separatorColor        | `color`               | `widget_my_custom_input.xml`  |
+| custom:toggleWidth    		| `dimension`           | `widget_my_custom_input.xml`  |
+
+
 ```xml
 <belka.us.androidtoggleswitch.widgets.ToggleSwitch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:textSize="18sp"
         custom:activeBgColor="@android:color/holo_blue_dark"
         custom:activeTextColor="@android:color/white"
