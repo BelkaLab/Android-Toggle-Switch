@@ -1,6 +1,31 @@
 # Android-Toggle-Switch
 A customizable extension to Android switches that supports many items.
 
+![Sample of libray](docs/screen.jpg)
+
+
+## Installation
+
+#### Gradle
+
+```
+compile 'us.belka:androidtoggleswitch:1.0'
+```
+
+#### Maven
+```
+<dependency>
+  <groupId>us.belka</groupId>
+  <artifactId>androidtoggleswitch</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+```
+
+## Listeners
+
+## Customizations
+
 ## Contributors
 Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab)
 
