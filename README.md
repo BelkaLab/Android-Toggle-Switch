@@ -55,7 +55,7 @@ dependencies {
 
 #### N - Items support
 
-Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
+This can be accomplished only **programmatically**.
 
 XML
 ```xml
@@ -78,7 +78,7 @@ toggleSwitch.setLabels(labels);
 ```
 ![Sample of libray with 3 items](docs/n_items.jpg)
 
-NOTE. In any case the first button is checked by default.
+NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
 
 ## Getters
 
