@@ -66,18 +66,36 @@ Your XML
 
 ```java
 ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.multiple_switches);
-        ArrayList<String> labels = new ArrayList<>();
-        labels.add("AND");
-        labels.add("OR");
-        labels.add("XOR");
-        labels.add("NOT");
-        labels.add("OFF");
-        toggleSwitch.setLabels(labels);
+ArrayList<String> labels = new ArrayList<>();
+labels.add("AND");
+labels.add("OR");
+labels.add("XOR");
+labels.add("NOT");
+labels.add("OFF");
+toggleSwitch.setLabels(labels);
 ```
 ![Sample of libray with 3 items](docs/n_items.jpg)
 
 ## Customizations
 
+```xml
+<belka.us.androidtoggleswitch.widgets.ToggleSwitch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        custom:activeBgColor="@android:color/holo_blue_dark"
+        custom:activeTextColor="@android:color/white"
+        custom:inactiveBgColor="@android:color/white"
+        custom:inactiveTextColor="@android:color/black"
+        custom:separatorColor="@color/gray_very_light"
+        custom:textToggleCenter="APPLE"
+        custom:textToggleLeft="ORANGE"
+        custom:textToggleRight="BANANA"
+        custom:toggleWidth="104dp"/>
+```
+
+![Sample of libray with 3 items](docs/customized.jpg)
 
 ## Listener
 
@@ -87,7 +105,7 @@ toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChan
 
             @Override
             public void onToggleSwitchChangeListener(int position) {
-				Write your code ... 
+				// Write your code ... 
             }
         });
 ```
