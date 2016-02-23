@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ToggleSwitchOptions">
+        <attr name="toggleWidth"        format="dimension"/>
+
+        <attr name="textToggleCenter"   format="string" localization="suggested" />
+        <attr name="textToggleLeft"     format="string" localization="suggested" />
+        <attr name="textToggleRight"    format="string" localization="suggested" />
+
+        <attr name="activeBgColor"      format="color"/>
+        <attr name="activeTextColor"    format="color"/>
+        <attr name="inactiveBgColor"    format="color"/>
+        <attr name="inactiveTextColor"  format="color"/>
+        <attr name="separatorColor"     format="color"/>
+
+        <attr name="android:textSize"/>
+    </declare-styleable>
+</resources>
