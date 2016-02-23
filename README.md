@@ -80,12 +80,17 @@ toggleSwitch.setLabels(labels);
 
 NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
 
-## Getters
+## Getters and Setters
 
-Get the position of the current checked toggleSwitch.
+Get and set the position of the current checked ToggleSwitch.
 
 ```java
 int position = toggleSwitch.getCheckedTogglePosition();
+```
+
+```java
+int position = 3;
+toggleSwitch.setCheckedTogglePosition(position);
 ```
 
 
@@ -102,7 +107,9 @@ toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChan
         });
 ```
 
-## Customizations
+## Customization
+
+#### Attributes
 
 It is possible to customize the buttons applying the following options:
 
