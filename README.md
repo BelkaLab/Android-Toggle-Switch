@@ -38,7 +38,7 @@ dependencies {
         custom:textToggleRight="AND"/>
 ```
 
-![Sample of libray with 2 items](docs/2_items.jpg)
+![Sample of libray with 2 items](docs/2_items.gif)
 
 #### 3 Items
 
