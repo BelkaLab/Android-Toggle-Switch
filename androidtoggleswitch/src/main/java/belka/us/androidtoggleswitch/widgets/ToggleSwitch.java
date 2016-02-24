@@ -52,13 +52,6 @@ public class ToggleSwitch extends LinearLayout{
 
     private OnToggleSwitchChangeListener mOnToggleSwitchChangeListener = null;
 
-    public void setLabels(ArrayList<String> labels){
-        if(labels == null || labels.isEmpty())
-            throw new RuntimeException("The list of labels must contains at least 2 elements");
-        mLabels = labels;
-        buildToggleButtons();
-    }
-
     public ToggleSwitch(Context context) {
         super(context);
     }
@@ -99,7 +92,6 @@ public class ToggleSwitch extends LinearLayout{
     }
 
     private void buildToggleButtons(){
-        mToggleSwitchesContainer.removeAllViews();
         for(String label : mLabels)
             addToogleBtn(label);
         setCheckedTogglePosition(0);
@@ -188,12 +180,17 @@ public class ToggleSwitch extends LinearLayout{
         }
     }
 
-    private void showSeparator(LinearLayout linearLayout){
-        getSeparator(linearLayout).setVisibility(View.VISIBLE);
-    }
-
     public void setOnToggleSwitchChangeListener(OnToggleSwitchChangeListener onToggleSwitchChangeListener){
         this.mOnToggleSwitchChangeListener = onToggleSwitchChangeListener;
+    }
+
+    public void setLabels(ArrayList<String> labels){
+        if(labels == null || labels.isEmpty())
+            throw new RuntimeException("The list of labels must contains at least 2 elements");
+        mLabels = labels;
+        mToggleButtons.clear();
+        mToggleSwitchesContainer.removeAllViews();
+        buildToggleButtons();
     }
 
     private void setStyle(LinearLayout toggleBtn){
@@ -201,6 +198,10 @@ public class ToggleSwitch extends LinearLayout{
         toggleBtnTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize);
         toggleBtnTxt.setLayoutParams(new LayoutParams((int) mToggleWidth, LayoutParams.WRAP_CONTENT));
         getSeparator(toggleBtn).setBackgroundColor(mSeparatorColor);
+    }
+
+    private void showSeparator(LinearLayout linearLayout){
+        getSeparator(linearLayout).setVisibility(View.VISIBLE);
     }
 
     private float dp2px(Context context, float dp){
