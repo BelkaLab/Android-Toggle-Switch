@@ -47,6 +47,8 @@ public class ToggleSwitch extends LinearLayout{
         public void onClick(View v) {
             LinearLayout toggleBtn = (LinearLayout) v.getParent();
             setCheckedTogglePosition(mToggleButtons.indexOf(toggleBtn));
+            if(mOnToggleSwitchChangeListener != null)
+                mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(mCheckedTogglePosition);
         }
     };
 
@@ -167,8 +169,6 @@ public class ToggleSwitch extends LinearLayout{
         active(toggleBtn);
         mCheckedTogglePosition = position;
         setSeparatorVisibility(mCheckedTogglePosition);
-        if(mOnToggleSwitchChangeListener != null)
-            mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(mCheckedTogglePosition);
     }
 
     private void setSeparatorVisibility(int activeIndex){
