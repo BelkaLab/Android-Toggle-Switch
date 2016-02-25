@@ -12,7 +12,7 @@ Add Gradle dependency:
 
 ```
 dependencies {
-	compile 'us.belka:androidtoggleswitch:1.1'
+	compile 'us.belka:androidtoggleswitch:1.1.1'
 }
 ```
 
