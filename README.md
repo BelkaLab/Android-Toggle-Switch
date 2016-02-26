@@ -1,5 +1,9 @@
 # Android-Toggle-Switch
 
+![Alt text](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
+![Alt text](http://www.android-gems.com/badge/BelkaLab/Android-Toggle-Switch.svg)
+
+
 A customizable extension of Android Switches that supports also more than 2 items.
 
 ![Sample of libray](docs/screen.jpg)
