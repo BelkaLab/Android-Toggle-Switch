@@ -1,6 +1,7 @@
 # Android-Toggle-Switch
 
 ![Alt text](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Toggle%20Switch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3235)
 ![Alt text](http://www.android-gems.com/badge/BelkaLab/Android-Toggle-Switch.svg)
 
 
