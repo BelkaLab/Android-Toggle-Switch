@@ -10,14 +10,14 @@ A customizable extension of Android Switches that supports also more than 2 item
 #### Gradle
 Add Gradle dependency:
 
-```
+```groovy
 dependencies {
 	compile 'us.belka:androidtoggleswitch:1.1.1'
 }
 ```
 
 #### Maven
-```
+```xml
 <dependency>
   <groupId>us.belka</groupId>
   <artifactId>androidtoggleswitch</artifactId>

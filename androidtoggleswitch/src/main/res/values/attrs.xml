@@ -13,6 +13,8 @@
         <attr name="inactiveTextColor"  format="color"/>
         <attr name="separatorColor"     format="color"/>
 
+        <attr name="cornerRadius"       format="dimension"/>
+
         <attr name="android:textSize"/>
     </declare-styleable>
 </resources>
