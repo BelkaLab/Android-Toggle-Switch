@@ -25,7 +25,7 @@ import belka.us.androidtoggleswitch.widgets.util.ToggleSwitchButton;
 public abstract class BaseToggleSwitch extends LinearLayout implements View.OnClickListener{
 
     public static abstract class OnToggleSwitchChangeListener{
-        public abstract void onToggleSwitchChangeListener(int position, boolean isActive);
+        public abstract void onToggleSwitchChangeListener(int position, boolean isChecked);
     }
 
     protected static class Default {

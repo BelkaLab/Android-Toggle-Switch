@@ -46,7 +46,7 @@ public class MultipleToggleSwitch extends BaseToggleSwitch {
         }
     }
 
-    public Set<Integer> getCheckedPositions() {
+    public Set<Integer> getCheckedTogglePositions() {
         return mCheckedPositions;
     }
 

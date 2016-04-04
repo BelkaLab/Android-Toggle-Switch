@@ -87,30 +87,60 @@ NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/
 
 ## Getters and Setters
 
-Get and set the position of the current checked ToggleSwitch.
+
+### Toggle Switch
+
+* `int getCheckedTogglePosition()` Returns the current checked position
 
 ```java
 int position = toggleSwitch.getCheckedTogglePosition();
 ```
+
+* `void setCheckedTogglePosition(int position)` Checks the position passed as argument
 
 ```java
 int position = 3;
 toggleSwitch.setCheckedTogglePosition(position);
 ```
 
+### Multiple Toggle Switch
+
+* `void setCheckedTogglePosition(int position)` Checks the position passed as argument
+
+```java
+int position = 3;
+multipleToggleSwitch.setCheckedTogglePosition(position);
+```
+
+* `void setUncheckedTogglePosition(int position)` Unchecks the position passed as argument
+
+```java
+int position = 0;
+multipleToggleSwitch.setUncheckedTogglePosition(position);
+```
+
+* `Set<Integer> getCheckedTogglePositions()` Returns the set of the current checked position
+
+```java
+Set<Integer> checkedPositions = multipleToggleSwitch.getCheckedTogglePositions();
+```
+
+
+
 
 ## Listeners
 
 ```java
-ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.toggle_switch);
 toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChangeListener(){
 
             @Override
-            public void onToggleSwitchChangeListener(int position) {
+            public void onToggleSwitchChangeListener(int position, boolean isChecked) {
 				// Write your code ... 
             }
         });
 ```
+
+
 
 ## Customization
 
