@@ -85,10 +85,25 @@ toggleSwitch.setLabels(labels);
 
 NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/Right] will be ignored.
 
+#### Multiple checked items support
+
+XML
+```xml
+<belka.us.androidtoggleswitch.widgets.MultipleToggleSwitch
+        android:id="@+id/multiple_toggle_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:textToggleCenter="Center"
+        custom:textToggleLeft="Left"
+        custom:textToggleRight="Right"
+        android:layout_gravity="center"
+        custom:toggleWidth="82dp"/>
+```
+
 ## Getters and Setters
 
 
-### Toggle Switch
+#### Toggle Switch
 
 * `int getCheckedTogglePosition()` Returns the current checked position
 
@@ -103,7 +118,7 @@ int position = 3;
 toggleSwitch.setCheckedTogglePosition(position);
 ```
 
-### Multiple Toggle Switch
+#### Multiple Toggle Switch
 
 * `void setCheckedTogglePosition(int position)` Checks the position passed as argument
 
@@ -119,7 +134,7 @@ int position = 0;
 multipleToggleSwitch.setUncheckedTogglePosition(position);
 ```
 
-* `Set<Integer> getCheckedTogglePositions()` Returns the set of the current checked position
+* `Set<Integer> getCheckedTogglePositions()` Returns the set of the current checked positions
 
 ```java
 Set<Integer> checkedPositions = multipleToggleSwitch.getCheckedTogglePositions();
