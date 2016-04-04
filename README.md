@@ -128,6 +128,7 @@ It is possible to customize the buttons applying the following options:
 | custom:inactiveTextColor     | `color`               | Text color of the inactive buttons       |
 | custom:separatorColor        | `color`               | Color of the vertical separator between inactive buttons  |
 | custom:toggleWidth    		| `dimension`           | Width of each button  |
+| custom:cornerRadius			| `dimension`	         | Corner Radius in dp |
 
 #### Example
 

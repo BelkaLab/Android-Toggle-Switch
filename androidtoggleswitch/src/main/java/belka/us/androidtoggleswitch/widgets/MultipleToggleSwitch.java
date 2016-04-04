@@ -11,11 +11,6 @@ import java.util.TreeSet;
  */
 public class MultipleToggleSwitch extends BaseToggleSwitch {
 
-    private class Status {
-        private static final int ACTIVE     = 1;
-        private static final int INACTIVE   = 0;
-    }
-
     private Set<Integer> mCheckedPositions;
 
     public MultipleToggleSwitch(Context context) {
@@ -51,6 +46,10 @@ public class MultipleToggleSwitch extends BaseToggleSwitch {
         }
     }
 
+    public Set<Integer> getCheckedPositions() {
+        return mCheckedPositions;
+    }
+
     private void prepareSeparator(boolean isActive, int position) {
         if( !isLast(position) && isActive == isActive(position + 1))
             getToggleSwitchButton(position).showSeparator();
@@ -61,17 +60,6 @@ public class MultipleToggleSwitch extends BaseToggleSwitch {
     protected boolean isActive(int position) {
         return mCheckedPositions.contains(position);
     }
-
-//    @Override
-//    public void onClick(View v) {
-//        ToggleSwitchButton toggleBtn = (ToggleSwitchButton) v.getParent();
-//        int position = getToggleIndex(toggleBtn);
-//
-//
-//
-////        if(mOnToggleSwitchChangeListener != null)
-////            mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(mCheckedTogglePosition);
-//    }
 
     @Override
     protected void onClickOnToggleSwitch(int position) {
