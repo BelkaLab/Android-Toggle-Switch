@@ -87,7 +87,6 @@ NOTE: Providing a custom array of labels, the attributes textToggle[Left/Center/
 
 #### Multiple checked items support
 
-XML
 ```xml
 <belka.us.androidtoggleswitch.widgets.MultipleToggleSwitch
         android:id="@+id/multiple_toggle_switch"
@@ -97,8 +96,10 @@ XML
         custom:textToggleLeft="Left"
         custom:textToggleRight="Right"
         android:layout_gravity="center"
-        custom:toggleWidth="82dp"/>
+        custom:toggleWidth="82dp"/>                
 ```
+
+NOTE: Please not that it's a **different** widget `MultipleToggleSwitch` instead of the previous `ToggleSwitch`.
 
 ## Getters and Setters
 
