@@ -1,31 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal"
+    android:gravity="center_horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/two_items_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        custom:textToggleLeft="OR"
-        custom:textToggleRight="AND"
-        custom:toggleWidth="0dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="@dimen/space.medium"
+        android:paddingBottom="@dimen/space.medium">
 
-    <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.small"
+            android:text="@string/two_items_switch_text"
+            android:textAlignment="center" />
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            custom:textToggleLeft="OR"
+            custom:textToggleRight="AND" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/three_items_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        custom:textToggleLeft="OR"
-        custom:textToggleRight="AND"
-        custom:toggleWidth="0dp" />
-</LinearLayout>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/two_items_layout"
+        android:paddingTop="@dimen/space.medium"
+        android:paddingBottom="@dimen/space.medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.small"
+            android:text="@string/three_items_switch_text" />
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            custom:textToggleCenter="XOR"
+            custom:textToggleLeft="OR"
+            custom:textToggleRight="AND" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/multi_items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/three_items_layout"
+        android:paddingTop="@dimen/space.medium"
+        android:paddingBottom="@dimen/space.medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.small"
+            android:text="@string/multi_items_switch_text" />
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:id="@+id/multi_items_toggle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/customized_items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/multi_items_layout"
+        android:paddingTop="@dimen/space.medium"
+        android:paddingBottom="@dimen/space.medium">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.small"
+            android:text="@string/customized_items_switch_text" />
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:id="@+id/customized_items_toggle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            custom:activeBgColor="@android:color/holo_blue_dark"
+            custom:activeTextColor="@android:color/white"
+            custom:inactiveBgColor="@android:color/white"
+            custom:inactiveTextColor="@android:color/black"
+            custom:separatorColor="@color/gray_very_light"
+            custom:textToggleLeft="ORANGE"
+            custom:textToggleRight="BANANA"
+            custom:toggleWidth="104dp" />
+    </LinearLayout>
+</RelativeLayout>
