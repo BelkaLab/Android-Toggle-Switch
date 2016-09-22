@@ -257,8 +257,7 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
         LinearLayout toggleSwitchButton = (LinearLayout) v.getParent();
         int position = toggleSwitchesContainer.indexOfChild(toggleSwitchButton);
         onClickOnToggleSwitch(position);
-        if(mOnToggleSwitchChangeListener != null)
-            mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(position, isActive(position));
+//        notifyOnToggleChange(position);
     }
 
     protected abstract void onClickOnToggleSwitch(int position);
@@ -280,6 +279,11 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
 
     public void setOnToggleSwitchChangeListener(OnToggleSwitchChangeListener onToggleSwitchChangeListener){
         this.mOnToggleSwitchChangeListener = onToggleSwitchChangeListener;
+    }
+
+    public void notifyOnToggleChange(int position) {
+        if(mOnToggleSwitchChangeListener != null)
+            mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(position, isActive(position));
     }
 
     public void setTogglePadding(int left, int top, int right, int bottom) {

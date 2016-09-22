@@ -34,6 +34,7 @@ public class ToggleSwitch extends BaseToggleSwitch{
         activate(position);
         setSeparatorVisibility(position);
         mCheckedTogglePosition = position;
+        notifyOnToggleChange(position);
     }
 
     private void setSeparatorVisibility(int activeIndex){

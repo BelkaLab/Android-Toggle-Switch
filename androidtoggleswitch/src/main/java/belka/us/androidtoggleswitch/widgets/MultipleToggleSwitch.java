@@ -26,11 +26,13 @@ public class MultipleToggleSwitch extends BaseToggleSwitch {
     public void setCheckedTogglePosition(int position) {
         mCheckedPositions.add(position);
         prepareToggleSwitchLayouts();
+        notifyOnToggleChange(position);
     }
 
     public void setUncheckedTogglePosition(int position) {
         mCheckedPositions.remove(position);
         prepareToggleSwitchLayouts();
+        notifyOnToggleChange(position);
     }
 
     private void prepareToggleSwitchLayouts() {
