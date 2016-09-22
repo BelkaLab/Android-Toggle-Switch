@@ -1,1 +1,1 @@
-include ':androidtoggleswitch'
+include ':androidtoggleswitch', ':androidtoggleswitch-sample'
