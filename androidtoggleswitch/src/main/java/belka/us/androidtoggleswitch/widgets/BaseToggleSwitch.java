@@ -11,6 +11,7 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -181,13 +182,17 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
         TextView toggleBtnTxt = toggleSwitchButton.getTextView();
         toggleBtnTxt.setText(text);
         toggleBtnTxt.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
-        toggleBtnTxt.setLayoutParams(new LayoutParams((int) toggleWidth, LayoutParams.WRAP_CONTENT));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) toggleWidth, LayoutParams.WRAP_CONTENT);
+        if (toggleWidth == 0f) params.weight = 1f;
+        toggleBtnTxt.setLayoutParams(params);
 
         toggleSwitchButton.getSeparator().setBackgroundColor(separatorColor);
 
         toggleSwitchButton.getTextView().setOnClickListener(this);
 
-        toggleSwitchesContainer.addView(toggleSwitchButton.getView());
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams((int) toggleWidth, LayoutParams.MATCH_PARENT);
+        if (toggleWidth == 0f) layoutParams.weight = 1f;
+        toggleSwitchesContainer.addView(toggleSwitchButton.getView(), layoutParams);
 
         // Disable last added button
         disable(toggleSwitchesContainer.getChildCount() - 1);
