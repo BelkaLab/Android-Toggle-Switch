@@ -23,23 +23,23 @@ import belka.us.androidtoggleswitch.widgets.util.ToggleSwitchButton;
 /**
  * Created by lorenzorigato on 4/1/16.
  */
-public abstract class BaseToggleSwitch extends LinearLayout implements View.OnClickListener{
+public abstract class BaseToggleSwitch extends LinearLayout implements View.OnClickListener {
 
-    public static abstract class OnToggleSwitchChangeListener{
+    public static abstract class OnToggleSwitchChangeListener {
         public abstract void onToggleSwitchChangeListener(int position, boolean isChecked);
     }
 
     protected static class Default {
 
-        protected static final int ACTIVE_BG_COLOR        = R.color.blue;
-        protected static final int ACTIVE_TEXT_COLOR      = android.R.color.white;
-        protected static final int INACTIVE_BG_COLOR      = R.color.gray_light;
-        protected static final int INACTIVE_TEXT_COLOR    = R.color.gray;
-        protected static final int SEPARATOR_COLOR        = R.color.gray_very_light;
+        protected static final int ACTIVE_BG_COLOR = R.color.blue;
+        protected static final int ACTIVE_TEXT_COLOR = android.R.color.white;
+        protected static final int INACTIVE_BG_COLOR = R.color.gray_light;
+        protected static final int INACTIVE_TEXT_COLOR = R.color.gray;
+        protected static final int SEPARATOR_COLOR = R.color.gray_very_light;
 
-        protected static final int CORNER_RADIUS_DP       = 4;
-        protected static final float TEXT_SIZE            = 12;
-        protected static final float TOGGLE_WIDTH         = 64;
+        protected static final int CORNER_RADIUS_DP = 4;
+        protected static final float TEXT_SIZE = 12;
+        protected static final float TOGGLE_WIDTH = 64;
     }
 
     private OnToggleSwitchChangeListener mOnToggleSwitchChangeListener = null;
@@ -64,8 +64,8 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
 
     public BaseToggleSwitch(Context context, AttributeSet attrs) {
         super(context, attrs);
-        if(attrs != null){
-            TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ToggleSwitchOptions, 0, 0);;
+        if (attrs != null) {
+            TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.ToggleSwitchOptions, 0, 0);
 
             try {
                 mContext = context;
@@ -75,24 +75,24 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
 
                 toggleSwitchesContainer = (LinearLayout) findViewById(R.id.toggle_switches_container);
 
-                String centerToggleText             = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleCenter);
-                String leftToggleText               = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleLeft);
-                String rightToggleText              = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleRight);
+                String centerToggleText = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleCenter);
+                String leftToggleText = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleLeft);
+                String rightToggleText = attributes.getString(R.styleable.ToggleSwitchOptions_textToggleRight);
 
-                this.activeBgColor                  = attributes.getColor(R.styleable.ToggleSwitchOptions_activeBgColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.ACTIVE_BG_COLOR));
-                this.activeTextColor                = attributes.getColor(R.styleable.ToggleSwitchOptions_activeTextColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.ACTIVE_TEXT_COLOR));
-                this.inactiveBgColor                = attributes.getColor(R.styleable.ToggleSwitchOptions_inactiveBgColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.INACTIVE_BG_COLOR));
-                this.inactiveTextColor              = attributes.getColor(R.styleable.ToggleSwitchOptions_inactiveTextColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.INACTIVE_TEXT_COLOR));
-                this.separatorColor                 = attributes.getColor(R.styleable.ToggleSwitchOptions_separatorColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.SEPARATOR_COLOR));
-                this.textSize                       = attributes.getDimensionPixelSize(R.styleable.ToggleSwitchOptions_android_textSize, (int) dp2px(context, BaseToggleSwitch.Default.TEXT_SIZE));
-                this.toggleWidth                    = attributes.getDimension(R.styleable.ToggleSwitchOptions_toggleWidth, dp2px(getContext(), BaseToggleSwitch.Default.TOGGLE_WIDTH));
-                this.cornerRadius                   = attributes.getDimensionPixelSize(R.styleable.ToggleSwitchOptions_cornerRadius, (int) dp2px(context, BaseToggleSwitch.Default.CORNER_RADIUS_DP));
+                this.activeBgColor = attributes.getColor(R.styleable.ToggleSwitchOptions_activeBgColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.ACTIVE_BG_COLOR));
+                this.activeTextColor = attributes.getColor(R.styleable.ToggleSwitchOptions_activeTextColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.ACTIVE_TEXT_COLOR));
+                this.inactiveBgColor = attributes.getColor(R.styleable.ToggleSwitchOptions_inactiveBgColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.INACTIVE_BG_COLOR));
+                this.inactiveTextColor = attributes.getColor(R.styleable.ToggleSwitchOptions_inactiveTextColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.INACTIVE_TEXT_COLOR));
+                this.separatorColor = attributes.getColor(R.styleable.ToggleSwitchOptions_separatorColor, ContextCompat.getColor(context, BaseToggleSwitch.Default.SEPARATOR_COLOR));
+                this.textSize = attributes.getDimensionPixelSize(R.styleable.ToggleSwitchOptions_android_textSize, (int) dp2px(context, BaseToggleSwitch.Default.TEXT_SIZE));
+                this.toggleWidth = attributes.getDimension(R.styleable.ToggleSwitchOptions_toggleWidth, dp2px(getContext(), BaseToggleSwitch.Default.TOGGLE_WIDTH));
+                this.cornerRadius = attributes.getDimensionPixelSize(R.styleable.ToggleSwitchOptions_cornerRadius, (int) dp2px(context, BaseToggleSwitch.Default.CORNER_RADIUS_DP));
 
-                if(leftToggleText != null && !leftToggleText.isEmpty() &&
-                        rightToggleText != null && !rightToggleText.isEmpty()){
+                if (leftToggleText != null && !leftToggleText.isEmpty() &&
+                        rightToggleText != null && !rightToggleText.isEmpty()) {
                     mLabels = new ArrayList<>();
                     mLabels.add(leftToggleText);
-                    if(centerToggleText != null && !centerToggleText.isEmpty())
+                    if (centerToggleText != null && !centerToggleText.isEmpty())
                         mLabels.add(centerToggleText);
                     mLabels.add(rightToggleText);
                     buildToggleButtons();
@@ -171,7 +171,7 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
 
     // *********** PRIVATE INSTANCE METHODS ************
 
-    protected void activate(int position){
+    protected void activate(int position) {
         setColors(getToggleSwitchButton(position), activeBgColor, activeTextColor);
     }
 
@@ -198,35 +198,35 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
         disable(toggleSwitchesContainer.getChildCount() - 1);
     }
 
-    private RoundRectShape buildRect(ToggleSwitchButton toggleSwitchButton){
-        if(isFirst(toggleSwitchButton))
+    private RoundRectShape buildRect(ToggleSwitchButton toggleSwitchButton) {
+        if (isFirst(toggleSwitchButton))
             return new RoundRectShape(
-                    new float[] {cornerRadius,cornerRadius, 0,0, 0,0, cornerRadius,cornerRadius},
+                    new float[]{cornerRadius, cornerRadius, 0, 0, 0, 0, cornerRadius, cornerRadius},
                     null,
                     null);
         else if (isLast(toggleSwitchButton))
             return new RoundRectShape(
-                    new float[] {0,0, cornerRadius,cornerRadius, cornerRadius,cornerRadius, 0,0},
+                    new float[]{0, 0, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0, 0},
                     null,
                     null);
         else
             return new RoundRectShape(
-                    new float[] {0,0, 0,0, 0,0, 0,0},
+                    new float[]{0, 0, 0, 0, 0, 0, 0, 0},
                     null,
                     null);
     }
 
-    protected void buildToggleButtons(){
-        for(String label : mLabels)
+    protected void buildToggleButtons() {
+        for (String label : mLabels)
             addToogleBtn(label);
     }
 
-    protected void disable(int position){
+    protected void disable(int position) {
         setColors(getToggleSwitchButton(position), inactiveBgColor, inactiveTextColor);
     }
 
-    protected void disableAll(){
-        for(int i=0; i < toggleSwitchesContainer.getChildCount(); i++)
+    protected void disableAll() {
+        for (int i = 0; i < toggleSwitchesContainer.getChildCount(); i++)
             disable(i);
     }
 
@@ -257,7 +257,6 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
         LinearLayout toggleSwitchButton = (LinearLayout) v.getParent();
         int position = toggleSwitchesContainer.indexOfChild(toggleSwitchButton);
         onClickOnToggleSwitch(position);
-//        notifyOnToggleChange(position);
     }
 
     protected abstract void onClickOnToggleSwitch(int position);
@@ -269,25 +268,25 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
         toggleSwitchButton.getTextView().setTextColor(textColor);
     }
 
-    public void setLabels(ArrayList<String> labels){
-        if(labels == null || labels.isEmpty())
+    public void setLabels(ArrayList<String> labels) {
+        if (labels == null || labels.isEmpty())
             throw new RuntimeException("The list of labels must contains at least 2 elements");
         mLabels = labels;
         toggleSwitchesContainer.removeAllViews();
         buildToggleButtons();
     }
 
-    public void setOnToggleSwitchChangeListener(OnToggleSwitchChangeListener onToggleSwitchChangeListener){
+    public void setOnToggleSwitchChangeListener(OnToggleSwitchChangeListener onToggleSwitchChangeListener) {
         this.mOnToggleSwitchChangeListener = onToggleSwitchChangeListener;
     }
 
     public void notifyOnToggleChange(int position) {
-        if(mOnToggleSwitchChangeListener != null)
+        if (mOnToggleSwitchChangeListener != null)
             mOnToggleSwitchChangeListener.onToggleSwitchChangeListener(position, isActive(position));
     }
 
     public void setTogglePadding(int left, int top, int right, int bottom) {
-        for (int i=0; i< toggleSwitchesContainer.getChildCount(); i++ ) {
+        for (int i = 0; i < toggleSwitchesContainer.getChildCount(); i++) {
             ToggleSwitchButton toggleSwitchButton = new ToggleSwitchButton(toggleSwitchesContainer.getChildAt(i));
             toggleSwitchButton.getTextView().setPadding(left, top, right, bottom);
         }
@@ -295,7 +294,7 @@ public abstract class BaseToggleSwitch extends LinearLayout implements View.OnCl
 
     // **************** UTILS *****************
 
-    private float dp2px(Context context, float dp){
+    private float dp2px(Context context, float dp) {
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
         float px = dp * (metrics.densityDpi / 160f);

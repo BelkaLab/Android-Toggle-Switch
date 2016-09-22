@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">androidtoggleswitch-sample</string>
+    <string name="app_name">Toggle Switch Sample</string>
     <string name="two_items_switch_text">2 Items</string>
     <string name="three_items_switch_text">3 Items</string>
     <string name="n_items_switch_text">N Items</string>

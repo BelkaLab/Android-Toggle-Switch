@@ -10,7 +10,7 @@ import belka.us.androidtoggleswitch.R;
 /**
  * Created by lorenzorigato on 4/1/16.
  */
-public class ToggleSwitchButton {
+public class ToggleSwitchButton{
 
     private View view;
     private TextView textView;
