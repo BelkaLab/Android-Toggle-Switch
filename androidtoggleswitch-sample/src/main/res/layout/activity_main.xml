@@ -18,15 +18,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingTop="@dimen/space.medium"
-        android:paddingBottom="@dimen/space.medium">
+        android:paddingBottom="@dimen/space.medium"
+        android:paddingTop="@dimen/space.medium">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text.medium"
             android:layout_height="wrap_content"
             android:padding="@dimen/space.small"
-            android:text="@string/two_items_switch_text"
-            android:textAlignment="center" />
+            android:text="@string/two_items_switch_text" />
 
         <belka.us.androidtoggleswitch.widgets.ToggleSwitch
             android:layout_width="wrap_content"
@@ -43,11 +42,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/two_items_layout"
-        android:paddingTop="@dimen/space.medium"
-        android:paddingBottom="@dimen/space.medium">
+        android:paddingBottom="@dimen/space.medium"
+        android:paddingTop="@dimen/space.medium">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text.medium"
             android:layout_height="wrap_content"
             android:padding="@dimen/space.small"
             android:text="@string/three_items_switch_text" />
@@ -62,26 +61,27 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/multi_items_layout"
+        android:id="@+id/n_items_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/three_items_layout"
-        android:paddingTop="@dimen/space.medium"
-        android:paddingBottom="@dimen/space.medium">
+        android:paddingBottom="@dimen/space.medium"
+        android:paddingTop="@dimen/space.medium">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text.medium"
             android:layout_height="wrap_content"
             android:padding="@dimen/space.small"
-            android:text="@string/multi_items_switch_text" />
+            android:text="@string/n_items_switch_text" />
 
         <belka.us.androidtoggleswitch.widgets.ToggleSwitch
-            android:id="@+id/multi_items_toggle_switch"
+            android:id="@+id/n_items_toggle_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            custom:toggleWidth="50dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -90,12 +90,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/multi_items_layout"
-        android:paddingTop="@dimen/space.medium"
-        android:paddingBottom="@dimen/space.medium">
+        android:layout_below="@+id/n_items_layout"
+        android:paddingBottom="@dimen/space.medium"
+        android:paddingTop="@dimen/space.medium">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/text.medium"
             android:layout_height="wrap_content"
             android:padding="@dimen/space.small"
             android:text="@string/customized_items_switch_text" />
@@ -104,6 +104,7 @@
             android:id="@+id/customized_items_toggle_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textSize="18sp"
             custom:activeBgColor="@android:color/holo_blue_dark"
             custom:activeTextColor="@android:color/white"
@@ -112,6 +113,34 @@
             custom:separatorColor="@color/gray_very_light"
             custom:textToggleLeft="ORANGE"
             custom:textToggleRight="BANANA"
+            custom:cornerRadius="8dp"
             custom:toggleWidth="104dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/multi_items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/customized_items_layout"
+        android:paddingBottom="@dimen/space.medium"
+        android:paddingTop="@dimen/space.medium">
+
+        <TextView
+            android:layout_width="@dimen/text.medium"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space.small"
+            android:text="@string/multi_items_switch_text" />
+
+        <belka.us.androidtoggleswitch.widgets.MultipleToggleSwitch
+            android:id="@+id/multiple_toggle_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            custom:textToggleCenter="Center"
+            custom:textToggleLeft="Left"
+            custom:textToggleRight="Right"
+            custom:toggleWidth="78dp" />
     </LinearLayout>
 </RelativeLayout>

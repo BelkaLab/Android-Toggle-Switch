@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.multi_items_toggle_switch);
+        ToggleSwitch toggleSwitch = (ToggleSwitch) findViewById(R.id.n_items_toggle_switch);
         ArrayList<String> labels = new ArrayList<>();
         labels.add("A");
         labels.add("B");
