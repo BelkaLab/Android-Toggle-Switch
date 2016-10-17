@@ -198,7 +198,7 @@ It is possible to customize the buttons applying the following options:
 
 
 ## Contributors
-Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab)
+Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab),  
 Fabrizio Rizzonelli, Android Developer @[Belka](https://github.com/BelkaLab)
 
 ## License
