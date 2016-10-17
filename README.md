@@ -199,6 +199,7 @@ It is possible to customize the buttons applying the following options:
 
 ## Contributors
 Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab)
+Fabrizio Rizzonelli, Android Developer @[Belka](https://github.com/BelkaLab)
 
 ## License
 Android-Toggle-Switch is Copyright (c) 2016 Belka, srl. It is free software, and may be redistributed under the terms specified in the LICENSE file.  
