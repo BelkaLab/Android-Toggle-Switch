@@ -8,7 +8,7 @@ import belka.us.androidtoggleswitch.widgets.util.ToggleSwitchButton;
 /**
  * Created by lorenzorigato on 2/22/16.
  */
-public class ToggleSwitch extends BaseToggleSwitch{
+public class ToggleSwitch extends BaseToggleSwitch {
 
     private int mCheckedTogglePosition;
 
@@ -29,18 +29,23 @@ public class ToggleSwitch extends BaseToggleSwitch{
         setCheckedTogglePosition(position);
     }
 
-    public void setCheckedTogglePosition(int position){
+    public void setCheckedTogglePosition(int position) {
+        setCheckedTogglePosition(position, true);
+    }
+
+    public void setCheckedTogglePosition(int position, boolean notifyListener) {
         disableAll();
         activate(position);
         setSeparatorVisibility(position);
         mCheckedTogglePosition = position;
-        notifyOnToggleChange(position);
+        if (notifyListener)
+            notifyOnToggleChange(position);
     }
 
-    private void setSeparatorVisibility(int activeIndex){
-        for(int i=0; i < getToggleSwitchesContainer().getChildCount() - 1;i++) {
+    private void setSeparatorVisibility(int activeIndex) {
+        for (int i = 0; i < getToggleSwitchesContainer().getChildCount() - 1; i++) {
             ToggleSwitchButton toggleSwitchButton = new ToggleSwitchButton(getToggleSwitchesContainer().getChildAt(i));
-            if(i == activeIndex || i == (activeIndex - 1))
+            if (i == activeIndex || i == (activeIndex - 1))
                 toggleSwitchButton.hideSeparator();
             else
                 toggleSwitchButton.showSeparator();

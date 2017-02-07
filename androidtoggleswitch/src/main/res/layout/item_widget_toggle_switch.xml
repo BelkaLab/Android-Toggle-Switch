@@ -15,8 +15,7 @@
         android:paddingBottom="@dimen/space.small"
         android:paddingLeft="@dimen/space.medium"
         android:paddingRight="@dimen/space.medium"
-        android:paddingTop="@dimen/space.small"
-        android:textAllCaps="true" />
+        android:paddingTop="@dimen/space.small" />
 
     <View
         android:id="@+id/separator"

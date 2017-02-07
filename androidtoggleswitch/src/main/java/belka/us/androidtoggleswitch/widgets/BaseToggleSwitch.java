@@ -11,7 +11,6 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,8 +24,8 @@ import belka.us.androidtoggleswitch.widgets.util.ToggleSwitchButton;
  */
 public abstract class BaseToggleSwitch extends LinearLayout implements View.OnClickListener {
 
-    public static abstract class OnToggleSwitchChangeListener {
-        public abstract void onToggleSwitchChangeListener(int position, boolean isChecked);
+    public interface OnToggleSwitchChangeListener {
+        void onToggleSwitchChangeListener(int position, boolean isChecked);
     }
 
     protected static class Default {

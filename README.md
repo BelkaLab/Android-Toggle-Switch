@@ -17,7 +17,7 @@ Add Gradle dependency:
 
 ```groovy
 dependencies {
-	compile 'us.belka:androidtoggleswitch:1.2.1'
+    compile 'us.belka:androidtoggleswitch:1.2.2'
 }
 ```
 
@@ -26,7 +26,7 @@ dependencies {
 <dependency>
   <groupId>us.belka</groupId>
   <artifactId>androidtoggleswitch</artifactId>
-  <version>1.0</version>
+  <version>1.2.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -198,7 +198,7 @@ It is possible to customize the buttons applying the following options:
 
 
 ## Contributors
-Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab),  
+Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab),
 Fabrizio Rizzonelli, Android Developer @[Belka](https://github.com/BelkaLab)
 
 ## License
