@@ -17,7 +17,7 @@ Add Gradle dependency:
 
 ```groovy
 dependencies {
-	compile 'us.belka:androidtoggleswitch:1.2.0'
+    compile 'us.belka:androidtoggleswitch:1.2.2'
 }
 ```
 
@@ -26,7 +26,7 @@ dependencies {
 <dependency>
   <groupId>us.belka</groupId>
   <artifactId>androidtoggleswitch</artifactId>
-  <version>1.0</version>
+  <version>1.2.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -151,7 +151,7 @@ toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChan
 
             @Override
             public void onToggleSwitchChangeListener(int position, boolean isChecked) {
-				// Write your code ... 
+                // Write your code ... 
             }
         });
 ```
@@ -165,16 +165,16 @@ toggleSwitch.setOnToggleSwitchChangeListener(new ToggleSwitch.OnToggleSwitchChan
 It is possible to customize the buttons applying the following options:
 
 
-| Option Name      				| Format                 | Description                              |
-| ---------------- 				| ---------------------- | -----------------------------            |
-| android:textSize 				| `dimension`  	         | Text size of each button                 |
+| Option Name                   | Format                 | Description                              |
+| ----------------              | ---------------------- | -----------------------------            |
+| android:textSize              | `dimension`            | Text size of each button                 |
 | custom:activeBgColor         | `color`               |  Background color of the checked button    |
 | custom:activeTextColor       | `color`               | Text color of the checked button |
-| custom:inactiveBgColor 		| `color`		         | Background color of the inactive buttons  |
+| custom:inactiveBgColor        | `color`                | Background color of the inactive buttons  |
 | custom:inactiveTextColor     | `color`               | Text color of the inactive buttons       |
 | custom:separatorColor        | `color`               | Color of the vertical separator between inactive buttons  |
-| custom:toggleWidth    		| `dimension`           | Width of each button  |
-| custom:cornerRadius			| `dimension`	         | Corner Radius in dp |
+| custom:toggleWidth            | `dimension`           | Width of each button  |
+| custom:cornerRadius           | `dimension`            | Corner Radius in dp |
 
 #### Example
 
@@ -198,7 +198,8 @@ It is possible to customize the buttons applying the following options:
 
 
 ## Contributors
-Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab)
+Lorenzo Rigato, Android Developer @[Belka](https://github.com/BelkaLab),  
+Fabrizio Rizzonelli, Android Developer @[Belka](https://github.com/BelkaLab)
 
 ## License
 Android-Toggle-Switch is Copyright (c) 2016 Belka, srl. It is free software, and may be redistributed under the terms specified in the LICENSE file.  
