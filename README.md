@@ -205,7 +205,7 @@ Fabrizio Rizzonelli, Android Developer @[Belka](https://github.com/BelkaLab)
 Android-Toggle-Switch is Copyright (c) 2016 Belka, srl. It is free software, and may be redistributed under the terms specified in the LICENSE file.  
 
 ## About Belka
-![Alt text](http://s2.postimg.org/rcjk3hf5x/logo_rosso.jpg)
+![Belka Logo](https://s.gravatar.com/avatar/88dc2225d85299e04489f56d5f38a533?size=180)
 
 [Belka](http://belka.us/en) is a Digital Agency specialized in design, mobile applications development and custom solutions.
 We love open source software! You can [see our projects](http://belka.us/en/portfolio/) or look at our case studies.
