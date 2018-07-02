@@ -1,5 +1,7 @@
 # Android-Toggle-Switch
 
+## Deprecation notice: this library is no longer maintained. If you are currently using it, we reccomend switching to the fork by the its original developer: https://github.com/llollox/Android-Toggle-Switch
+
 ![Alt text](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Toggle%20Switch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3235)
 ![Alt text](http://www.android-gems.com/badge/BelkaLab/Android-Toggle-Switch.svg)
